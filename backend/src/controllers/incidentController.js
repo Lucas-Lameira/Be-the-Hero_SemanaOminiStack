@@ -16,11 +16,38 @@ module.exports = {
         return response.json({id});
     },
 
-    //Listar CASOS
+    /*
+    //Listar todos os casos CASOS 
     async index (request, response) {
         const incidents = await connection('incidents').select('*');
 
         return response.json(incidents);
+    },
+    */
+    
+    //Listasr os casos com paginação
+    async index (request, response) {
+        const {page = 1} = request.query;//query params na url, se o parametro não existir o page será igual a 1
+
+        const [count] = await connection('incidents').count();
+
+        const incidents = await connection('incidents')
+        .join('ongs', 'ongs.id', '=', 'incidents.ong_id' ) //relacionar dados de duas tabelas. 'tabela', 'tabela.id', '=', 'incidents.ong_id' 
+        .limit(5) //exibir cinco incidents por pagina
+        .offset((page -1 ) * 5) //comeca do zero ate o cinco
+        .select([
+            'incidents.*', 
+            'ongs.name', 
+            'ongs.email', 
+            'ongs.whatsapp', 
+            'ongs.city', 
+            'ongs.uf'
+        ]);
+
+        response.header('X-Total-Count', count['count(*)']);//passando o total de incidents pelo cabecalho da resposta. console.log(count)
+
+        return response.json(incidents);
+
     },
 
     //Deletar CASOS

@@ -7,9 +7,11 @@ const crypto = require('crypto'); //pacote que vem junto com o node. Utilizar um
 const OngController = require('./controllers/OngController'); 
 const incidentController = require('./controllers/incidentController');
 const ProfileController = require('./controllers/ProfileController');
+const SessionController = require('./controllers/SessionController');
 
 //Arquivos com os Códigos na pasta controllers
 
+routes.post('/sessions', SessionController.create);
 
 routes.get('/ongs', OngController.index);//Rota para listar ONGs
 routes.post('/ongs', OngController.create);//Rota para criar ONGs 

@@ -18,6 +18,7 @@ talk about it
 -npm install nodemon -D
 -npm install knex
 -npm install sqlite3
+-npm install cors
 
 # npx - executa um pacote externo sem instala-lo
 npx create-react-app
