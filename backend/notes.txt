@@ -1,0 +1,109 @@
+#URL - Uniform Resource Locator
+    É o endereço de um recurso disponível em uma rede
+
+#Rotas ou rotamento
+    Como um aplicativo responde a solicitação de um cliente por um caminho 
+    específico ou URL e por um método http específico.
+
+    O express usa a seguinte estrutura:
+    app.Method(path, handler)
+
+    app: é uma instancia do express
+    method: é um método de solicitçao HTTP(get, post, put, delete)
+    path: é um caminho no servidor
+    handler: função executada quando a rota é correspondida
+
+    logo, uma rota é acessível por um método http
+
+#Métodos HTTP
+    get: Buscar/retornar uma informação do backend. Sempre ao consultar um URL no navegador o método GET é utilizado 
+    post: Criar uma informação no backend.
+    put: Alterar uma informação no backend.
+    delete: Deletar uma informação no backend.
+
+
+#Recursos
+    app.post('/users'); 'Users' é um recurso que estamos querendo acessar por meio do método post
+
+#Tipos de Parametros enviados em uma rota
+
+    Query Params: Parametros nomeados enviados na url ou rota. 
+        Os dados enviados na URL devem começar com '?', o nome do parametro e o valor dele.
+        Geralmente são usados para filtros, paginação, etc.
+        ex: http://localhost:3333/recurso?nome=valor 
+        Mais de um parametro:
+        ex: http://localhost:3333/recurso?page=2&nome=valor&idade=25
+
+    Route Params: parametros utilizados para identificar recursos. 
+        Buscar dados de um unico usuário.
+        ex: http://localhost:3333/recurso/:id
+
+    Request Body params: Corpo da requisição, utilizado para criar ou alterar recursos.
+        O corpo será enviado em json
+
+
+#Request
+    Guarda todos os dados que vem por meio de uma requisição do usuário
+    se um parametro for passado na requisição na url, utiliza-se o request
+    ex:
+        request.query
+        request.params
+        request.body
+
+
+#Response
+    Retorna uma resposta para o usuário
+    ex:
+        response.download()
+        response.json()
+        response.send()
+
+
+#Diferença entre Banco de Dados
+    SQL:
+        MySQL, 
+        SQLite
+        PostgreSQL,
+        Oracle,
+        Microsoft SQL Server
+    
+    NoSQL: Bancos não-relacionais
+        MongoDB,
+        CouchDB,
+        etc.
+
+    -uso do SQLite com query builder (sintaxe com código javascript)
+
+
+    ##Entidades da aplicação- representa algo q será salvo nmo banco de dados   
+        -ONG
+        -caso (incidente)
+    
+    ##Funcionalidades
+        -Login da ONG
+        -Logout da ONG
+        -Cadastro da ONG
+        -Cadastrar novos casos ONG
+        -Deletar casos ONG
+        -Listar os Casos especificos da ONG
+        -Listar todos os Casos
+        -Entrar em contato com a ONG
+
+#Migration
+    Criar tabelas de banco de dados e manter seu histórico
+    No knexfile.js, crie um migration{} com directory: './path'
+        useNullAsDefault: true
+    comando que cira a migratioin: npx knex migrate:make create_entidade
+
+    npx knex migrate:latest //cria a tabela no banco de dados
+
+
+#PASTA CONTROLLERS
+Um controller criado para cada entidade
+OngController.js : exportar um objeto com os métodos
+
+
+
+
+
+

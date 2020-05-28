@@ -8,16 +8,24 @@ talk about it
 
 
 # instalaçoes 
-chocolatey     
-cinst nodejs
-visual studio code
-
+-chocolatey     
+-cinst nodejs
+-visual studio code
+-insomnia
 # npm - 
-npm init -y; Criação do projeto com o node com o arquivo package.json
-npm install express
+-npm init -y; Criação do projeto com o node com o arquivo package.json
+-npm install express
+-npm install nodemon -D
+-npm install knex
+-npm install sqlite3
 
 # npx - executa um pacote externo sem instala-lo
 npx create-react-app
+npx kenx init
+npx knex
+    npx knex migrate:make create_entidade
+    npx knex migrate:latest
+    npx knex migrate:rollback
 
 # Back-end
 -Regras de negócio;
@@ -48,5 +56,9 @@ Os dados em json transitam entre backend, aplicação web e aplicação mobile.
 # React
 npm start
 
-# React Native
-dps ver o 1° video em 1:01:30
+
+# Pasta src
+Todo código desenvolvido
+
+# Pasta controllers (padrão MVC)
+Um controller criado para cada entidade
