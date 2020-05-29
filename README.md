@@ -19,6 +19,9 @@ talk about it
 -npm install knex
 -npm install sqlite3
 -npm install cors
+-npm install react-icons
+-npm install react-router-dom 
+-npm install axios
 
 # npx - executa um pacote externo sem instala-lo
 npx create-react-app

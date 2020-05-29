@@ -1,0 +1,33 @@
+#React
+    -O primeiro arquivo que o React lê é o index.html na pasta public
+    -O React monta a estrutura da pagina web(html, css) a partir do javascript
+    -O arquivo index.js, na pasta src, é o primeiro arquivo lido pelo index.html
+    -Mais de um elemento coloca-se algo em volta <div>
+
+
+#Componente React
+    É uma função que retorna html
+    Todos os componentes devem ter a primeira letra maiúscula.
+
+
+#JSX - javascript xml
+    html integrado/escrito dentro do javascript.
+
+#Propriedades React
+    -Similar ao conceito de atributo do html(id, class), as propriedades tem a mesma sintaxe(id="")
+    -São propriedades repassados para componentes, similar a atributos passados para elementos html 
+    ex: 
+        <Componente propriedade="Texto muito elaborado" />
+    -injetar variavel, função, javascript dentro do html do componente
+    -Propriedade autmomatica: {props.children}
+
+#Estado React
+    informação mantida pelo componente
+
+#Imutabilidade React
+    por uma questão de performance, o estado nao pode ser manipulado de uma forma direta
+    É preciso SOBREPOR o valor da variavel do estado
+
+
+#pasta pages
+    -cada pagina será um componente React
