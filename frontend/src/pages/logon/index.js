@@ -15,11 +15,11 @@ export default function Logon (){
     const history = useHistory();
 
     async function handleLogin(e){
-        e.preventDefault();
+        e.preventDefault();//fazer em todo formulário em react para evitar que ele redirecione
 
         try{
             const response = await api.post('sessions', {id});
-            localStorage.setItem('ongId', id);
+            localStorage.setItem('ongId', id); //deixa o id disponivel em toda a plicação(guardando o valor)
             localStorage.setItem('ongName', response.data.name);
 
             history.push('/profile')
