@@ -22,6 +22,7 @@ talk about it
 -npm install react-icons
 -npm install react-router-dom 
 -npm install axios
+-npm install -g expo-cli
 
 # npx - executa um pacote externo sem instala-lo
 npx create-react-app
@@ -57,12 +58,11 @@ O retorno pode ser um array, por exemplo, contendo a listagem de algo.
 
 Os dados em json transitam entre backend, aplicação web e aplicação mobile.
 
-# React
-npm start
-
-
-# Pasta src
+# Pastas src
 Todo código desenvolvido
 
 # Pasta controllers (padrão MVC)
 Um controller criado para cada entidade
+
+# Pasta Pages
+Cada página da aplicação é um componente React
