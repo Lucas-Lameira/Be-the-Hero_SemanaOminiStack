@@ -1,0 +1,36 @@
+#Adcionando validação
+
+#Adcionando Testes
+
+    #Por que fazer Testes
+
+    #TDD
+
+    #Configurando Jest
+
+    #Tipos de Testes
+
+    #Configurando banco de Testes
+
+    #Instalando supertest
+
+    #Testando Rota de autenticação
+
+#Deploy
+    
+    #Alternativas
+
+    #Qual escolher
+
+#Estudos pro futuro
+
+    #Padrões de Código: ESLint, Prettier
+
+    #Autenticação JWT
+
+    #Styled Components
+
+#Dicas
+
+    #github
+    #linkedin

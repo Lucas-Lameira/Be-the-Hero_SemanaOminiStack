@@ -13,16 +13,25 @@ talk about it
 -visual studio code
 -insomnia
 # npm - 
--npm init -y; Criação do projeto com o node com o arquivo package.json
--npm install express
--npm install nodemon -D
--npm install knex
--npm install sqlite3
--npm install cors
--npm install react-icons
--npm install react-router-dom 
--npm install axios
--npm install -g expo-cli
+-npm init -y; Criação do projeto com o node com o arquivo package.json.
+-npm install express.
+-npm install nodemon -D.
+-npm install knex.
+-npm install sqlite3.
+-npm install cors.
+-npm install react-icons.
+-npm install react-router-dom.
+-npm install axios.
+-npm install -g expo-cli.
+-npm install -g yarn
+-npm install @react-navigation/native
+-npm install @react-navigation/stack
+-npm install intl
+
+0# expo
+-expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+-expo install expo-constants
+-expo install expo-mail-composer
 
 # npx - executa um pacote externo sem instala-lo
 npx create-react-app
